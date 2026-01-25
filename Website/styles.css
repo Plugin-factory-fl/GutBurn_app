@@ -1,0 +1,301 @@
+/* ===== GutBurn Website – Shared Styles ===== */
+:root {
+  --green: #2dd41a;
+  --green-dark: #1eaa12;
+  --green-glow: #33ff33;
+  --purple: #8b5cf6;
+  --purple-dim: #6d28d9;
+  --bg: #0a0a0b;
+  --bg-card: #141416;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --border: #27272a;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", "SF Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s, opacity 0.2s;
+}
+a:hover {
+  color: var(--green-glow);
+}
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wrap-wide {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Header ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 11, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+.logo span { color: var(--green); }
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.nav a:hover { color: var(--text); }
+@media (max-width: 480px) {
+  .nav { gap: 16px; }
+  .nav a { font-size: 0.9rem; }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+}
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--green);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: var(--green-dark);
+  box-shadow: 0 0 24px rgba(45, 212, 26, 0.4);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  border-color: var(--purple);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+/* ===== Homepage Hero ===== */
+.hero {
+  padding: 64px 0 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+.hero h1 .accent { color: var(--green); }
+
+.hero .tagline {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.app-badge {
+  display: inline-block;
+  height: 44px;
+  transition: opacity 0.2s;
+}
+.app-badge:hover { opacity: 0.9; }
+
+/* ===== Features ===== */
+.section {
+  padding: 56px 0;
+}
+.section-alt { background: var(--bg-card); }
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+@media (min-width: 600px) {
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.feature {
+  padding: 24px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.feature:hover {
+  border-color: rgba(45, 212, 26, 0.3);
+  box-shadow: 0 0 24px rgba(45, 212, 26, 0.08);
+}
+
+.feature h3 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  color: var(--green);
+}
+.feature p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 48px 0 32px;
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-links a { color: var(--text-muted); font-size: 0.9rem; }
+.footer-links a:hover { color: var(--text); }
+
+.copyright { font-size: 0.9rem; color: var(--text-muted); }
+
+/* ===== Content pages (Privacy, Support) ===== */
+.page {
+  padding: 48px 0 80px;
+}
+
+.page h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.page .updated { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 32px; }
+
+.page h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  color: var(--text);
+}
+.page h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+
+.page p, .page li {
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+.page ul { padding-left: 1.25rem; margin: 0 0 16px; }
+.page li { margin-bottom: 6px; }
+
+/* ===== Support: FAQ ===== */
+.faq-list { margin-top: 24px; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+.faq-item:first-child { padding-top: 0; }
+.faq-item h4 { margin: 0 0 8px; font-size: 1rem; color: var(--text); }
+.faq-item p { margin: 0; font-size: 0.95rem; }
+
+.contact-box {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.contact-box h3 { margin-top: 0; }
+.contact-box a { font-weight: 500; }
+
+/* ===== App Store / SEO ===== */
+.app-meta {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}

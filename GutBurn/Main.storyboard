@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SplashVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="S1-Splash">
+            <objects>
+                <viewController id="SplashVC" customClass="SplashViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="splashView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="splashFirst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-400"/>
+        </scene>
+        <scene sceneID="S1-VC1">
+            <objects>
+                <viewController id="VC1" customClass="ViewController" sceneMemberID="viewController" storyboardIdentifier="MainCalculator">
+                    <view key="view" contentMode="scaleToFill" id="view1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="YES" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="scroll1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="content1">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="stack1">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="Calculate Your Daily Burned Calories" textAlignment="center" id="titleL">
+                                                        <rect key="frame" x="16" y="16" width="361" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="bold" pointSize="20"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Weight (lb)" id="weightL">
+                                                        <rect key="frame" x="16" y="42" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. 165" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weightF">
+                                                        <rect key="frame" x="16" y="72" width="361" height="34"/>
+                                                        <constraints><constraint firstAttribute="height" constant="34" id="h1"/></constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <integer key="tag">100</integer>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Height (ft)" id="heightFtL">
+                                                        <rect key="frame" x="16" y="190" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. 5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heightFtF">
+                                                        <rect key="frame" x="16" y="220" width="175" height="34"/>
+                                                        <constraints><constraint firstAttribute="height" constant="34" id="h3"/></constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <integer key="tag">101</integer>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Height (in)" id="heightInL">
+                                                        <rect key="frame" x="16" y="264" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. 9" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heightInF">
+                                                        <rect key="frame" x="16" y="294" width="175" height="34"/>
+                                                        <constraints><constraint firstAttribute="height" constant="34" id="h4"/></constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <integer key="tag">102</integer>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Age" id="ageL">
+                                                        <rect key="frame" x="16" y="338" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. 30" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ageF">
+                                                        <rect key="frame" x="16" y="368" width="361" height="34"/>
+                                                        <constraints><constraint firstAttribute="height" constant="34" id="h5"/></constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <integer key="tag">103</integer>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Sex" id="sexL">
+                                                        <rect key="frame" x="16" y="412" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="sexSeg">
+                                                        <rect key="frame" x="16" y="442" width="361" height="32"/>
+                                                        <segments>
+                                                            <segment title="Male"/>
+                                                            <segment title="Female"/>
+                                                        </segments>
+                                                        <integer key="tag">104</integer>
+                                                    </segmentedControl>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Activity level (per day)" id="actL">
+                                                        <rect key="frame" x="16" y="484" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="actPck">
+                                                        <rect key="frame" x="16" y="514" width="361" height="32"/>
+                                                        <constraints><constraint firstAttribute="height" constant="32" id="h6"/></constraints>
+                                                        <segments>
+                                                            <segment title="0-10 min"/>
+                                                            <segment title="10-30 min"/>
+                                                            <segment title="1 hour"/>
+                                                            <segment title="1.5 hours"/>
+                                                            <segment title="2 hours"/>
+                                                        </segments>
+                                                        <integer key="tag">105</integer>
+                                                    </segmentedControl>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Days per week you train" id="daysL">
+                                                        <rect key="frame" x="16" y="556" width="361" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="e.g. 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daysF">
+                                                        <rect key="frame" x="16" y="586" width="361" height="34"/>
+                                                        <constraints><constraint firstAttribute="height" constant="34" id="h8"/></constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="calcBtn">
+                                                        <rect key="frame" x="16" y="624" width="361" height="40"/>
+                                                        <constraints><constraint firstAttribute="height" constant="40" id="h7"/></constraints>
+                                                        <state key="normal" title="Calculate"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
+                                                        <connections>
+                                                            <action selector="onCalculate:" destination="VC1" eventType="touchUpInside" id="act1"/>
+                                                        </connections>
+                                                        <integer key="tag">106</integer>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="To lose weight: aim for ~500 kcal below your TDEE. To bulk: aim for ~250 kcal above." id="tipL">
+                                                        <rect key="frame" x="16" y="742" width="361" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <number key="numberOfLines" integerValue="0"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="stack1" firstAttribute="top" secondItem="content1" secondAttribute="top" constant="16" id="c1"/>
+                                            <constraint firstItem="stack1" firstAttribute="leading" secondItem="content1" secondAttribute="leading" constant="16" id="c2"/>
+                                            <constraint firstItem="stack1" firstAttribute="trailing" secondItem="content1" secondAttribute="trailing" constant="-16" id="c3"/>
+                                            <constraint firstItem="stack1" firstAttribute="bottom" secondItem="content1" secondAttribute="bottom" constant="-16" id="c4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="content1" firstAttribute="top" secondItem="scroll1" secondAttribute="top" id="sc1"/>
+                                    <constraint firstItem="content1" firstAttribute="leading" secondItem="scroll1" secondAttribute="leading" id="sc2"/>
+                                    <constraint firstItem="content1" firstAttribute="trailing" secondItem="scroll1" secondAttribute="trailing" id="sc3"/>
+                                    <constraint firstItem="content1" firstAttribute="bottom" secondItem="scroll1" secondAttribute="bottom" id="sc4"/>
+                                    <constraint firstItem="content1" firstAttribute="width" secondItem="scroll1" secondAttribute="width" id="sc5"/>
+                                </constraints>
+                                <integer key="tag">109</integer>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="safe1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scroll1" firstAttribute="top" secondItem="safe1" secondAttribute="top" id="v1"/>
+                            <constraint firstItem="scroll1" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="v2"/>
+                            <constraint firstItem="scroll1" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="v3"/>
+                            <constraint firstItem="scroll1" firstAttribute="bottom" secondItem="safe1" secondAttribute="bottom" id="v4"/>
+                        </constraints>
+                    </view>
+                    <outlet property="activityControl" destination="actPck" id="outAct"/>
+                    <outlet property="ageField" destination="ageF" id="outAge"/>
+                    <outlet property="daysPerWeekField" destination="daysF" id="outDays"/>
+                    <outlet property="calculateButton" destination="calcBtn" id="outCalc"/>
+                    <outlet property="heightFtField" destination="heightFtF" id="outHft"/>
+                    <outlet property="heightFtLabel" destination="heightFtL" id="outHftL"/>
+                    <outlet property="heightInField" destination="heightInF" id="outHin"/>
+                    <outlet property="heightInLabel" destination="heightInL" id="outHinL"/>
+                    <outlet property="scrollView" destination="scroll1" id="outScroll"/>
+                    <outlet property="sexControl" destination="sexSeg" id="outSex"/>
+                    <outlet property="tipLabel" destination="tipL" id="outTip"/>
+                    <outlet property="weightField" destination="weightF" id="outWeight"/>
+                    <outlet property="weightLabel" destination="weightL" id="outWeightL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ph1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="95"/>
+        </scene>
+    </scenes>
+</document>

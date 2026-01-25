@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0001 /* main.m */; };
+		AA0002 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0002 /* AppDelegate.m */; };
+		AA0003 /* Units.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB0008 /* Units.cpp */; };
+		AA0004 /* UserProfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB0010 /* UserProfile.cpp */; };
+		AA0005 /* Calculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB0012 /* Calculator.cpp */; };
+		AA0006 /* CalculatorBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB0014 /* CalculatorBridge.mm */; };
+		AA0007 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB0016 /* ViewController.mm */; };
+		AA0008 /* ResultsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB0017 /* ResultsViewController.mm */; };
+		AA0009 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0019 /* SplashViewController.m */; };
+		AA0011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0005 /* Main.storyboard */; };
+		AA0012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0006 /* Assets.xcassets */; };
+		AA0021 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0021 /* UIKit.framework */; };
+		AA0022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0022 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB0000 /* GutBurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GutBurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB0002 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB0003 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB0004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB0005 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BB0006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB0007 /* Units.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Units.hpp; sourceTree = "<group>"; };
+		BB0008 /* Units.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Units.cpp; sourceTree = "<group>"; };
+		BB0009 /* UserProfile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UserProfile.hpp; sourceTree = "<group>"; };
+		BB0010 /* UserProfile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UserProfile.cpp; sourceTree = "<group>"; };
+		BB0011 /* Calculator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Calculator.hpp; sourceTree = "<group>"; };
+		BB0012 /* Calculator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Calculator.cpp; sourceTree = "<group>"; };
+		BB0013 /* CalculatorBridge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CalculatorBridge.hpp; sourceTree = "<group>"; };
+		BB0014 /* CalculatorBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CalculatorBridge.mm; sourceTree = "<group>"; };
+		BB0016 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		BB0017 /* ResultsViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResultsViewController.mm; sourceTree = "<group>"; };
+		BB0018 /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		BB0019 /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		BB0021 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB0022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC0030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0021 /* UIKit.framework in Frameworks */,
+				AA0022 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD0000 /* GutBurn */ = {
+			isa = PBXGroup;
+			children = (
+				BB0001 /* main.m */,
+				BB0002 /* AppDelegate.m */,
+				BB0003 /* AppDelegate.h */,
+				BB0004 /* Info.plist */,
+				BB0005 /* Main.storyboard */,
+				BB0006 /* Assets.xcassets */,
+				DD0010 /* Core */,
+				DD0020 /* Bridge */,
+				DD0030 /* Products */,
+				FA8ABEFA2F2566FB00B309DB /* Recovered References */,
+			);
+			path = GutBurn;
+			sourceTree = "<group>";
+		};
+		DD0010 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BB0007 /* Units.hpp */,
+				BB0008 /* Units.cpp */,
+				BB0009 /* UserProfile.hpp */,
+				BB0010 /* UserProfile.cpp */,
+				BB0011 /* Calculator.hpp */,
+				BB0012 /* Calculator.cpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DD0020 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				BB0018 /* SplashViewController.h */,
+				BB0019 /* SplashViewController.m */,
+				BB0013 /* CalculatorBridge.hpp */,
+				BB0014 /* CalculatorBridge.mm */,
+				BB0016 /* ViewController.mm */,
+				BB0017 /* ResultsViewController.mm */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		DD0030 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000 /* GutBurn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA8ABEFA2F2566FB00B309DB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BB0021 /* UIKit.framework */,
+				BB0022 /* Foundation.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE0000 /* GutBurn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF0020 /* Build configuration list for PBXNativeTarget "GutBurn" */;
+			buildPhases = (
+				EE0001 /* Sources */,
+				EE0002 /* Resources */,
+				CC0030 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GutBurn;
+			productName = GutBurn;
+			productReference = BB0000 /* GutBurn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF0000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EE0000 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = FF0010 /* Build configuration list for PBXProject "GutBurn" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD0000 /* GutBurn */;
+			productRefGroup = DD0030 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE0000 /* GutBurn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE0002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0011 /* Main.storyboard in Resources */,
+				AA0012 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE0001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0001 /* main.m in Sources */,
+				AA0002 /* AppDelegate.m in Sources */,
+				AA0003 /* Units.cpp in Sources */,
+				AA0004 /* UserProfile.cpp in Sources */,
+				AA0005 /* Calculator.cpp in Sources */,
+				AA0006 /* CalculatorBridge.mm in Sources */,
+				AA0007 /* ViewController.mm in Sources */,
+				AA0008 /* ResultsViewController.mm in Sources */,
+				AA0009 /* SplashViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FF0011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF0012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF0021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CH6U6B6V8N;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/GutBurn/Core",
+					"$(SRCROOT)/GutBurn/Bridge",
+				);
+				INFOPLIST_FILE = GutBurn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gut Burn";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gutburn.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF0022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CH6U6B6V8N;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/GutBurn/Core",
+					"$(SRCROOT)/GutBurn/Bridge",
+				);
+				INFOPLIST_FILE = GutBurn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gut Burn";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gutburn.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF0010 /* Build configuration list for PBXProject "GutBurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0011 /* Debug */,
+				FF0012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF0020 /* Build configuration list for PBXNativeTarget "GutBurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0021 /* Debug */,
+				FF0022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF0000 /* Project object */;
+}
