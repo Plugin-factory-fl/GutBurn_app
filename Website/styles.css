@@ -290,6 +290,16 @@ a:hover {
 .contact-box h3 { margin-top: 0; }
 .contact-box a { font-weight: 500; }
 
+/* ===== References page ===== */
+.ref-item {
+  margin: 20px 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ref-item:last-of-type { border-bottom: none; }
+.ref-item p { margin: 0 0 8px; }
+.ref-item a { font-weight: 500; }
+
 /* ===== App Store / SEO ===== */
 .app-meta {
   margin-top: 24px;

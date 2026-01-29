@@ -20,6 +20,7 @@
 		AA0012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0006 /* Assets.xcassets */; };
 		AA0021 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0021 /* UIKit.framework */; };
 		AA0022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0022 /* Foundation.framework */; };
+		AA0023 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0023 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BB0019 /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		BB0021 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BB0022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB0023 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			files = (
 				AA0021 /* UIKit.framework in Frameworks */,
 				AA0022 /* Foundation.framework in Frameworks */,
+				AA0023 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +118,7 @@
 			children = (
 				BB0021 /* UIKit.framework */,
 				BB0022 /* Foundation.framework */,
+				BB0023 /* SafariServices.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";

@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <SafariServices/SafariServices.h>
 #include "CalculatorBridge.hpp"
 #import "ResultsViewController.h"
 
@@ -116,6 +117,20 @@ static std::string ns2str(NSString *s) {
     [nc addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [nc addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 
+    // Sources & references button (Guideline 1.4.1 – citations easy to find)
+    NSString *refURLString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GutBurnReferencesURL"];
+    if (refURLString.length > 0 && self.scrollView) {
+        UIView *content = self.scrollView.subviews.firstObject;
+        UIStackView *stack = (content.subviews.count > 0 && [content.subviews.firstObject isKindOfClass:[UIStackView class]]) ? (UIStackView *)content.subviews.firstObject : nil;
+        if (stack) {
+            UIButton *sourcesBtn = [UIButton systemButtonWithPrimaryAction:nil];
+            [sourcesBtn setTitle:@"Sources & references" forState:UIControlStateNormal];
+            [sourcesBtn addTarget:self action:@selector(openReferences:) forControlEvents:UIControlEventTouchUpInside];
+            sourcesBtn.translatesAutoresizingMaskIntoConstraints = NO;
+            [sourcesBtn.heightAnchor constraintEqualToConstant:44].active = YES;
+            [stack addArrangedSubview:sourcesBtn];
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -134,6 +149,19 @@ static std::string ns2str(NSString *s) {
 
 - (void)dismissKeyboard {
     [self.view endEditing:YES];
+}
+
+- (void)openReferences:(id)sender {
+    NSString *refURLString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GutBurnReferencesURL"];
+    if (refURLString.length == 0) return;
+    NSURL *url = [NSURL URLWithString:refURLString];
+    if (!url) return;
+    if (@available(iOS 9.0, *)) {
+        SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:url];
+        [self presentViewController:safari animated:YES completion:nil];
+    } else {
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+    }
 }
 
 - (void)handleTapToDismissKeyboard:(UITapGestureRecognizer *)gesture {

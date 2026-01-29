@@ -43,5 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GutBurnReferencesURL</key>
+	<string>https://plugin-factory-fl.github.io/GutBurn_app/references.html</string>
 </dict>
 </plist>

@@ -1,4 +1,5 @@
 #import "ResultsViewController.h"
+#import <SafariServices/SafariServices.h>
 
 @interface ResultsViewController ()
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
@@ -19,6 +20,7 @@
     self.view.backgroundColor = [UIColor systemBackgroundColor];
     self.navigationItem.title = @"Your Results";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneTapped)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sources" style:UIBarButtonItemStylePlain target:self action:@selector(openReferences)];
 
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -206,6 +208,19 @@
 
 - (void)doneTapped {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)openReferences {
+    NSString *refURLString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GutBurnReferencesURL"];
+    if (refURLString.length == 0) return;
+    NSURL *url = [NSURL URLWithString:refURLString];
+    if (!url) return;
+    if (@available(iOS 9.0, *)) {
+        SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:url];
+        [self presentViewController:safari animated:YES completion:nil];
+    } else {
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+    }
 }
 
 @end

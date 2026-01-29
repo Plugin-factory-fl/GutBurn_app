@@ -16,8 +16,9 @@ The site is deployed from the **`Website/`** subfolder via GitHub Actions.
 
 In the repo **Settings → Pages**:
 
-1. **Build and deployment → Source:** choose **GitHub Actions**.
-2. On the next push to `main`, the workflow will run and deploy. The site will be at the URL above.
+1. **Build and deployment → Source:** choose **Deploy from a branch** (not "GitHub Actions").
+2. **Branch:** select **gh-pages** and **/ (root)**. If `gh-pages` isn’t listed yet, push to `main` once so the workflow creates it, then select it.
+3. Save. On each push to `main`, the workflow publishes `Website/` to `gh-pages` and Pages serves the site at the URL above.
 
 ---
 
@@ -45,6 +46,7 @@ In the repo **Settings → Pages**:
 Website/
 ├── index.html      # Homepage
 ├── privacy.html    # Privacy Policy (for Privacy Policy URL)
+├── references.html # Sources & references (for in-app citations, Guideline 1.4.1)
 ├── support.html    # Support (for Support URL)
 ├── styles.css      # Shared styles
 └── README.md       # This file
